@@ -42,7 +42,10 @@
         "laravel": {
             "providers": [
                 "Avangate\\AvangatePayLaravel\\AvangatePayServiceProvider"
-            ]
+            ],
+            "aliases": {
+              "AvangatePayLaravel": "Avangate\\AvangatePayLaravel\\AvangatePayLaravelFacade"
+            }
         }
     },
     "config": {
