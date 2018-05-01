@@ -26,10 +26,10 @@ class AvangatePayLaravel
   protected $client;
   
 	/**
-	 * IyzipayLaravel constructor.
+	 * AvangateLaravel constructor.
 	 *
-	 * @throws IyzipayAuthenticationException
-	 * @throws IyzipayConnectionException
+	 * @throws AvangateAuthenticationException
+	 * @throws AvangateConnectionException
 	 */
 	public function __construct ()
 	{

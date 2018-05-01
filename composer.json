@@ -1,6 +1,6 @@
 {
     "name": "kulpinar/avangate-laravel",
-    "description": "Laravel Avangate subscription billing services.",
+    "description": "Laravel Avangate Subscription Billing Services.",
     "keywords": ["laravel", "avangate", "billing"],
     "license": "MIT",
     "support": {
@@ -25,9 +25,7 @@
         "illuminate/http": "~5.3",
         "illuminate/routing": "~5.3",
         "illuminate/view": "~5.3",
-        "mockery/mockery": "~1.0",
         "phpunit/phpunit": "~5.0",
-        "vlucas/phpdotenv": "~2.0",
         "guzzlehttp/guzzle": "6.*"
     },
     "autoload": {
