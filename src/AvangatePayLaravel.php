@@ -47,7 +47,7 @@ class AvangatePayLaravel
   
   public function AddACustomer(Customer $customer)
   {
-    $receiveData = SendData($customer->customer, 'customers/');
+    $receiveData = self::SendData($customer->customer, 'customers/');
     
     static::assertTrue(is_int($receiveData));
     static::assertTrue($receiveData > 0);
