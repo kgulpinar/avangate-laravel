@@ -2,6 +2,7 @@
 namespace Avangate\AvangatePayLaravel;
 
 use Illuminate\Support\ServiceProvider;
+use Avangate\AvangatePayLaravel\AvangatePayLaravel;
 
 class AvangatePayServiceProvider extends ServiceProvider
 {
