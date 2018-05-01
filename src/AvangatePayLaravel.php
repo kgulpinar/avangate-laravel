@@ -39,9 +39,9 @@ class AvangatePayLaravel
      * @Setup
      */
     $this->client = new Client([
-          'code'  => $this->apiOptions->getMerchantCode(),
-          'key'   => $this->apiOptions->getApiKey(),
-          'base_uri' => 'https://api.avangate.com/3.0/'
+          'code'      => $this->apiOptions->getMerchantCode(),
+          'key'       => $this->apiOptions->getApiKey(),
+          'base_uri'  => 'https://api.avangate.com/3.0/'
      ]);
 	}
   
@@ -55,7 +55,7 @@ class AvangatePayLaravel
     return [
             'inputCustomerData' => $customer,
             'internalCustomerReference' => $receiveData
-        ];
+          ];
   }  
   
   

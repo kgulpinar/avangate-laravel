@@ -13,6 +13,9 @@ class AvangatePayServiceProvider extends ServiceProvider
     public function boot()
     {
         //
+        $this->publishes([
+            __DIR__ . '/../config/config.php' => config_path('avangatepay.php')
+        ]);
     }
     /**
      * Register any package services.
