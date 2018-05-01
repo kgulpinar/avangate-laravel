@@ -4,7 +4,6 @@ namespace Avangate\AvangatePayLaravel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Collection;
 use AvangateClient;
-use Carbon\Carbon;
 
 use Avangate\AvangatePayLaravel\Options;
 use Avangate\AvangatePayLaravel\Customer;

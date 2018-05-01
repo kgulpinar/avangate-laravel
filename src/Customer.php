@@ -2,8 +2,6 @@
 
 namespace Avangate\AvangatePayLaravel;
 
-use Avangate\AvangatePayLaravel\AvangatePayLaravel;
-
 use AvangateClient\Client;
 use GuzzleHttp\Exception\ClientException;
 use Avangate\AvangatePayLaravel\AvangatePayLaravelFacade as AvangatePayLaravel;
