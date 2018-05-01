@@ -41,7 +41,7 @@ class AvangatePayLaravel
     $this->client = new Client([
           'code'      => $this->apiOptions->getMerchantCode(),
           'key'       => $this->apiOptions->getApiKey(),
-          'base_uri'  => 'https://api.avangate.com/3.0/'
+          'base_uri'  => $this->apiOptions->getBaseUrl()
      ]);
 	}
   
