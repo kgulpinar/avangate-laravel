@@ -1,6 +1,7 @@
 <?php
 
 namespace Avangate\AvangatePayLaravel;
+
 use Illuminate\Support\Facades\Facade;
 
 class AvangatePayLaravelFacade extends Facade

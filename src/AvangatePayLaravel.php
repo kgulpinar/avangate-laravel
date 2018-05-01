@@ -6,7 +6,7 @@ use Illuminate\Support\Collection;
 use AvangateClient;
 use Carbon\Carbon;
 
-use Avangate\Options;
+use Avangate\AvangatePayLaravel\Options;
 
 use AvangateClient\Client;
 use GuzzleHttp\Exception\ClientException;

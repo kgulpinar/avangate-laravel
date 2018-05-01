@@ -32,7 +32,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Avangate\\AvangatePay\\": "src/"
+            "Avangate\\AvangatePayLaravel\\": "src/"
         }
     },
     "extra": {

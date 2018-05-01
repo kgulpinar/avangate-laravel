@@ -1,5 +1,5 @@
 <?php
-namespace Avangate;
+namespace Avangate\AvangatePayLaravel;
 
 class Options
 {
