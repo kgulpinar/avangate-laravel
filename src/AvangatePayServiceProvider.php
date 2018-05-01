@@ -23,7 +23,7 @@ class AvangatePayServiceProvider extends ServiceProvider
     {
       
         $this->mergeConfigFrom(
-            __DIR__ . '/../config/config.php', 'avangatepay'
+            __DIR__ . '/../config/config.php', 'avangate'
         );
       
         $this->app->bind('avangate-laravel', function () {

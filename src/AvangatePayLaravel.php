@@ -7,6 +7,7 @@ use AvangateClient;
 use Carbon\Carbon;
 
 use Avangate\AvangatePayLaravel\Options;
+use Avangate\AvangatePayLaravel\Customer;
 
 use AvangateClient\Client;
 use GuzzleHttp\Exception\ClientException;
@@ -45,6 +46,45 @@ class AvangatePayLaravel
      ]);
 	}
   
+  public function AddACustomer(Customer $customer)
+  {
+    $receiveData = SendData($customer->customer, 'customers/');
+    
+    static::assertTrue(is_int($receiveData));
+    static::assertTrue($receiveData > 0);
+    
+    return [
+            'inputCustomerData' => $customer,
+            'internalCustomerReference' => $receiveData
+        ];
+  }  
+  
+  
+  public function SendData($params , $url)
+  {
+      $headers = [
+            'headers' => [
+                'Accept' => 'application/json',
+                'Content-type' => 'application/json',
+                'verify' => false,
+                'proxy' => ''
+            ],
+            'body' => json_encode($params),
+        ];
+    
+        $internalCustomerReference = null;
+    
+        try {
+            $rawResponse = $this->client->post($url, $headers);
+            $returnData = json_decode($rawResponse->getBody()->getContents());
+        } catch (ClientException $e) {
+            static::fail($e->getMessage() . ' -- ' . $e->getResponse()->getBody()->getContents());
+        }
+
+        return $returnData;
+    
+  }
+  
   /**
 	 * Initializing API options with the given credentials.
 	 */
@@ -55,6 +95,7 @@ class AvangatePayLaravel
 		$this->apiOptions->setMerchantCode( config( 'avangate.MerchantCode' ) );
 		$this->apiOptions->setApiKey( config( 'avangate.apiKey' ) );
 	}
+  
   
 	/**
 	 * @return Options
