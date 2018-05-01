@@ -29,7 +29,7 @@ use Avangate\AvangatePayLaravel\AvangatePayLaravelFacade as AvangatePayLaravel;
 class Customer
 {
  
-  protected $customer;
+  public $customer;
   
   /*
    *  @param Customer
@@ -41,7 +41,7 @@ class Customer
     $this->customer = $param;
     
     return  [
-              'gelen' =>$params,
+              'gelen' =>$param,
               'customer' => AvangatePayLaravel::AddACustomer($this)
             ];
     

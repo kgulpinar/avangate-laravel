@@ -74,7 +74,7 @@ class AvangatePayLaravel
             $rawResponse = $this->client->post($url, $headers);
             $returnData = json_decode($rawResponse->getBody()->getContents());
         } catch (ClientException $e) {
-            static::fail($e->getMessage() . ' -- ' . $e->getResponse()->getBody()->getContents());
+            $returnData = ($e->getMessage() . ' -- ' . $e->getResponse()->getBody()->getContents());
         }
 
         return $returnData;
