@@ -2,6 +2,7 @@
 namespace Avangate\AvangatePayLaravel;
 
 use Illuminate\Support\ServiceProvider;
+
 class AvangatePayServiceProvider extends ServiceProvider
 {
     /**
@@ -22,8 +23,7 @@ class AvangatePayServiceProvider extends ServiceProvider
     {
       
         $this->mergeConfigFrom(
-            __DIR__ . '/../config/config.php',
-            'iyzipay'
+            __DIR__ . '/../config/config.php', 'avangatepay'
         );
       
         $this->app->bind('avangate-laravel', function () {

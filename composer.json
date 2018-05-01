@@ -41,7 +41,7 @@
         },
         "laravel": {
             "providers": [
-                "Avangate\\AvangatePay\\AvangatePayServiceProvider"
+                "Avangate\\AvangatePayLaravel\\AvangatePayServiceProvider"
             ]
         }
     },
