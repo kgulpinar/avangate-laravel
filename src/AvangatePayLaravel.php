@@ -49,9 +49,6 @@ class AvangatePayLaravel
   {
     $receiveData = self::SendData($customer->customer, 'customers/');
     
-    static::assertTrue(is_int($receiveData));
-    static::assertTrue($receiveData > 0);
-    
     return [
             'inputCustomerData' => $customer,
             'internalCustomerReference' => $receiveData

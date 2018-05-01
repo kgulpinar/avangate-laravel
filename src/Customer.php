@@ -34,13 +34,16 @@ class Customer
   /*
    *  @param Customer
    */
-  public function __construct ($param = null)
+  public function __construct ($param)
 	{
-    if($this->customer == null ) return(null);
+    //if($this->customer == null ) return(null);
     
     $this->customer = $param;
     
-    return AvangatePayLaravel::AddACustomer($this);
+    return  [
+              'gelen' =>$params,
+              'customer' => AvangatePayLaravel::AddACustomer($this)
+            ];
     
     
   }
